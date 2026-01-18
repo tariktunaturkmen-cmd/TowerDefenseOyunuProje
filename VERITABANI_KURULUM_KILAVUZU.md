@@ -1,69 +1,69 @@
-# Tower Defense - Veritabanı Entegrasyonu Kurulum Kılavuzu
+# Tower Defense - VeritabanÄ± Entegrasyonu Kurulum KÄ±lavuzu
 
-## Adım 1: NuGet Paketini Yükleyin
+## AdÄ±m 1: NuGet Paketini YÃ¼kleyin
 
-Projenizde System.Data.SQLite paketini kurmanız gerekmektedir.
+Projenizde System.Data.SQLite paketini kurmanÄ±z gerekmektedir.
 
-### Visual Studio aracılığıyla:
+### Visual Studio aracÄ±lÄ±ÄŸÄ±yla:
 
-1. **Araçlar ? NuGet Paket Yöneticisi ? Paket Yöneticisi Konsolu** açın
-2. Aşağıdaki komutu yazın ve Enter'a basın:
+1. **AraÃ§lar   NuGet Paket YÃ¶neticisi   Paket YÃ¶neticisi Konsolu** aÃ§Ä±n
+2. AÅŸaÄŸÄ±daki komutu yazÄ±n ve Enter'a basÄ±n:
 
 ```
 Install-Package System.Data.SQLite
 ```
 
-Paket başarıyla yüklendiğinde, konsol şu mesajı gösterecektir:
+Paket baÅŸarÄ±yla yÃ¼klendiÄŸinde, konsol ÅŸu mesajÄ± gÃ¶sterecektir:
 ```
 Successfully installed 'System.Data.SQLite'
 ```
 
-## Adım 2: Using Statement Ekleyin
+## AdÄ±m 2: Using Statement Ekleyin
 
-Form1.cs dosyasının en başında aşağıdaki using statement'i etkinleştirin:
+Form1.cs dosyasÄ±nÄ±n en baÅŸÄ±nda aÅŸaÄŸÄ±daki using statement'i etkinleÅŸtirin:
 
 ```csharp
 using System.Data.SQLite;
 ```
 
-Bu satır şu anda yorum yapılmıştır, aktifleştirmeniz gerekmektedir.
+Bu satÄ±r ÅŸu anda yorum yapÄ±lmÄ±ÅŸtÄ±r, aktifleÅŸtirmeniz gerekmektedir.
 
-## Adım 3: VeritabaniYoneticisi.cs Kodunu Aktifleştirin
+## AdÄ±m 3: VeritabaniYoneticisi.cs Kodunu AktifleÅŸtirin
 
-`VeritabaniYoneticisi.cs` dosyasında SQLite ile ilgili tüm `/* ... */` yorum bloklarını silin ve kodu aktifleştirin.
+`VeritabaniYoneticisi.cs` dosyasÄ±nda SQLite ile ilgili tÃ¼m `/* ... */` yorum bloklarÄ±nÄ± silin ve kodu aktifleÅŸtirin.
 
-## Özellikleri
+## Ã–zellikleri
 
-? **Oyun Skorları Kaydedilir:**
-- Oyuncu adı
-- Başarılı dalgalar sayısı
-- Kazanılan altın miktarı
-- Kale canı durumu
-- Oynanış tarihi ve saati
+  **Oyun SkorlarÄ± Kaydedilir:**
+- Oyuncu adÄ±
+- BaÅŸarÄ±lÄ± dalgalar sayÄ±sÄ±
+- KazanÄ±lan altÄ±n miktarÄ±
+- Kale canÄ± durumu
+- OynanÄ±ÅŸ tarihi ve saati
 
-? **En Yüksek Skorlar Görüntülenebilir:**
+  **En YÃ¼ksek Skorlar GÃ¶rÃ¼ntÃ¼lenebilir:**
 - En iyi 10 skor listelenir
-- Dalgalara göre sıralanır
-- Tarih/saat bilgisi ile gösterilir
+- Dalgalara gÃ¶re sÄ±ralanÄ±r
+- Tarih/saat bilgisi ile gÃ¶sterilir
 
-## Veritabanı Dosyası
+## VeritabanÄ± DosyasÄ±
 
-Oyun ilk çalıştırıldığında `TowerDefense.db` dosyası otomatik olarak oluşturulacaktır.
+Oyun ilk Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda `TowerDefense.db` dosyasÄ± otomatik olarak oluÅŸturulacaktÄ±r.
 
-Bu dosya aşağıdaki konumda yer alacaktır:
+Bu dosya aÅŸaÄŸÄ±daki konumda yer alacaktÄ±r:
 ```
-C:\Users\[KullanıcıAdı]\OneDrive\Desktop\TowerDefenseOyunuProje\TowerDefenseOyunuProje\TowerDefense.db
+C:\Users\[KullanÄ±cÄ±AdÄ±]\OneDrive\Desktop\TowerDefenseOyunuProje\TowerDefenseOyunuProje\TowerDefense.db
 ```
 
-## Kullanım
+## KullanÄ±m
 
-1. Oyunu başlatın ve oyun sonunda kale yıkıldığında:
-2. "En Yüksek Skorları görmek ister misiniz?" sorusuna **Evet** diye cevap verin
-3. Kayıtlı tüm skorlar listelenecektir
+1. Oyunu baÅŸlatÄ±n ve oyun sonunda kale yÄ±kÄ±ldÄ±ÄŸÄ±nda:
+2. "En YÃ¼ksek SkorlarÄ± gÃ¶rmek ister misiniz " sorusuna **Evet** diye cevap verin
+3. KayÄ±tlÄ± tÃ¼m skorlar listelenecektir
 
 ## Sorun Giderme
 
-Eğer hala `CS0234` hatası alıyorsanız:
-1. Visual Studio'yu kapatın
-2. Proje klasörü içindeki `bin` ve `obj` klasörlerini silin
-3. Projeyi yeniden açın ve Build All yapın
+EÄŸer hala `CS0234` hatasÄ± alÄ±yorsanÄ±z:
+1. Visual Studio'yu kapatÄ±n
+2. Proje klasÃ¶rÃ¼ iÃ§indeki `bin` ve `obj` klasÃ¶rlerini silin
+3. Projeyi yeniden aÃ§Ä±n ve Build All yapÄ±n
